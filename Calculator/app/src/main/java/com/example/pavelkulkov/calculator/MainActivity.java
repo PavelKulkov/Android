@@ -27,13 +27,15 @@ public class MainActivity extends Activity {
         try{
              tmp = Integer.parseInt(firstNumber.getText().toString())
                     + Integer.parseInt(secondNumber.getText().toString());
-            answer = firstNumber.getText().toString() + "+" + secondNumber.getText().toString()+"="+tmp;
-
+            if(Integer.parseInt(secondNumber.getText().toString()) < 0 ){
+                answer = firstNumber.getText().toString() + "+ (" + secondNumber.getText().toString()+") ="+tmp;
+            }else {
+                answer = firstNumber.getText().toString() + "+" + secondNumber.getText().toString() + "=" + tmp;
+            }
         }catch (Exception ex){
             answer = "Неверные данные";
         }
         intent.putExtra(KEY, answer);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
     }
 }
