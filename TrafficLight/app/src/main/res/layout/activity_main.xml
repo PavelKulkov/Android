@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/BG">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Красный"
+        android:textColor="@color/red"
+        android:onClick="changeBackgroundToRed"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Жёлтый"
+        android:textColor="@color/yellow"
+        android:onClick="changeBackgroundToYellow"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Зелёный"
+        android:textColor="@color/green"
+        android:onClick="changeBackgroundToGreen"
+        />
+</LinearLayout>
